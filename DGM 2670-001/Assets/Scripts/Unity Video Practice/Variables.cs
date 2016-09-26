@@ -15,6 +15,4 @@ public class Variables : MonoBehaviour {
     void Start () {
         print(myName);
 	}
-	
-	
 }

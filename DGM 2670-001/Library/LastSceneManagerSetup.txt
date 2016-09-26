@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Assignment4_DGM2221.unity
+- path: Assets/NewnewLevel.unity
   isLoaded: 1
   isActive: 1
