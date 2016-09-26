@@ -13,7 +13,7 @@ public class Variables : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
+        print(myName);
 	}
 	
 	
