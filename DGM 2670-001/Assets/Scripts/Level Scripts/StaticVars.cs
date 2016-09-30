@@ -1,8 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿
 
 public class StaticVars {
-    public static float distance = 4;
-    public static float nextSectionPosition = 12;
+    public static float distance = 17.5f;
+    public static float nextSectionPosition = 52.5f;
 }
 

@@ -5,12 +5,13 @@ using System.Collections.Generic;
 public class RecycleLevel : MonoBehaviour {
     // This script was created on 9/26/2016
 
-    private List<SendToRecycler> recycleList;
+    public List<SendToRecycler> recycleList;
     private Vector3 movePos;
-        void SendThisHandler (SendToRecycler _r)
+
+
+    void SendThisHandler (SendToRecycler obj)
     {
-        recycleList.Add(_r);
-        print(recycleList.Count);
+        recycleList.Add(obj);
     }
 
 	void Start () {
@@ -18,10 +19,12 @@ public class RecycleLevel : MonoBehaviour {
         SendToRecycler.SendThis += SendThisHandler;
 	}
 
-    void OnTrggerEnter ()
+    void OnTriggerEnter ()
     {
+        int i = UnityEngine.Random.Range(0, recycleList.Count - 1);
         movePos.x = Statics.nextPosition;
-        recycleList[0].transform.position = movePos;
+        recycleList[i].transform.position = movePos;
+        recycleList.RemoveAt(i);
         Statics.nextPosition += Statics.distance; 
     }
 	
