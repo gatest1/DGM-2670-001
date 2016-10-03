@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Unity Video Practice.unity
+- path: Assets/Scenes/Flip player Art.unity
   isLoaded: 1
   isActive: 1
