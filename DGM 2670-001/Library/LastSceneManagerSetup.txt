@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Flip player Art.unity
+- path: Assets/Scenes/ProperRecycling.unity
   isLoaded: 1
   isActive: 1
