@@ -9,8 +9,6 @@ public class RecycleLevelObject : MonoBehaviour {
     public List<Recycler> recyclableList;
     private int i = 0;
 
-    System.Random Rnd = new System.Random();
-    private float nextTerrain;
     void Start()
     {
         recyclableList = new List<Recycler>();

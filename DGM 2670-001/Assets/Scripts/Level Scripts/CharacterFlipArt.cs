@@ -31,10 +31,15 @@ public class CharacterFlipArt : MonoBehaviour {
 
     }
 
-    void FixedUpdate ()
+    void Start ()
 
     {
         UserInputs.UserInput += FlipCharacter;
     }
+
+	void OnDestroy ()
+	{
+		UserInputs.UserInput -= FlipCharacter;
+	}
 }
 

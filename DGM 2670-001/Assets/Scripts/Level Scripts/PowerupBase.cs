@@ -16,6 +16,6 @@ public class PowerupBase : MonoBehaviour {
     string UserInfo()
     {
         userName = firstName + lastName+1138;
-        return firstName + " " + lastName + "are you ready to play?";
+        return firstName + " " + lastName + "Are you ready to play?";
     }
         }

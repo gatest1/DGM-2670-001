@@ -7,13 +7,15 @@ public class Recycler : MonoBehaviour {
     public bool canBeRecycled = false;
     public Transform cube;
 
+
 	// Use this for initialization
 	void Start () {
         cube = this.GetComponent<Transform>();
         if (RecycleAction != null && canBeRecycled)
         {
-            RecycleAction(this);
+			RecycleAction(this);
         }
+
 	}
 	void OnTriggerEnter ()
     {
