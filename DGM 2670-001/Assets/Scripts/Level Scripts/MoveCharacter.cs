@@ -11,6 +11,7 @@ public class MoveCharacter : MonoBehaviour {
     public float speed = 1;
     public float gravity = 1;
     public float jumpSpeed = 1;
+
     public int jumpCount = 0;
     public int jumpCountMax = 2;
     //Sliding vars
