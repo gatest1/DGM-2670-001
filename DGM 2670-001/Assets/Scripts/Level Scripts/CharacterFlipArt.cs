@@ -9,6 +9,7 @@ public class CharacterFlipArt : MonoBehaviour {
 
     void FlipCharacter (KeyCode _keyCode)
     {
+		print ("Hey!");
         switch (_keyCode)
         {
             case KeyCode.LeftArrow:

@@ -70,6 +70,12 @@ public class MoveCharacter : MonoBehaviour {
         tempPos.x = speed * Input.GetAxis("Horizontal");
         //Moves the Character Controller in at an even pace (deltaTime)
         myCC.Move(tempPos * Time.deltaTime);  
-	
+		{
+			if(gameObject.tag == "PickUp")
+			{
+				gameObject.SetActive(false);
+			}
+
+		}
 	}
 }
