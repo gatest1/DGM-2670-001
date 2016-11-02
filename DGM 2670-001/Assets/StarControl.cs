@@ -37,7 +37,3 @@ public class StarControl : MonoBehaviour {
 		Destroy (gameObject, endTime);
 	}
 }
-//IEnumerator EndStar ()
-//{
-//	yield return new WaitForSeconds (endTime);
-//}
