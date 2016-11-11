@@ -24,7 +24,7 @@ public class WolfJump : MonoBehaviour {
 	void OnCollisionEnter (Collision collision)
 	{
 		if (collision.gameObject.tag == "Gap")
-			rb.AddForce (0, thrust, 0, ForceMode.Impulse);
+			rb.AddForce (thrust, 0, 0, ForceMode.Impulse);
 		print ("Cliff Jumper!");
 
 	}

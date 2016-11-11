@@ -1,4 +1,3 @@
-C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\Temp\bin\Debug\Assembly-CSharp.dll
 C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\Temp\bin\Debug\UnityEditor.dll
@@ -17,5 +16,6 @@ C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM
 C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\Temp\bin\Debug\UnityEditor.xml
 C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\Temp\bin\Debug\UnityEngine.UI.xml
 C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\obj\Debug\Assembly-CSharp.dll
 C:\Users\gatest1\Documents\School\DGM 2670 Scripting for Animation and Games\DGM-2670-001\DGM 2670-001\obj\Debug\Assembly-CSharp.pdb

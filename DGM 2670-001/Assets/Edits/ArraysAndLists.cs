@@ -1,15 +1,19 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
-public class ArraysAndLists : MonoBehaviour {
+static class ArraysAndLists 
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	static void Main ()
+	{
+		int[] ints = new int[] {1,5,10};
+		ArrayList myStarValues = new ArrayList();
+		myStarValues.Add (1);
+		myStarValues.Add (5);
+		myStarValues.Add (10);
+		foreach(int value in myStarValues)
+			Console.WriteLine(value);
 	}
 }
+
