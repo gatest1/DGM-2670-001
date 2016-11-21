@@ -3,13 +3,14 @@ using System.Collections;
 
 public class Inheritance : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public virtual void Start ()
+	{
+		
+		Walk ();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void Walk()
+	{
+		print ("Walking");
 	}
 }
