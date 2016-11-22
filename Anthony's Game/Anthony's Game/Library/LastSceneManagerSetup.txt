@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/Treasure Capture.unity
+- path: C:/Users/gatest1/Documents/School/DGM 2670 Scripting for Animation and Games/DGM-2670-001/DGM
+    2670-001/Assets/Scenes/Game2.0.unity
   isLoaded: 1
   isActive: 1
