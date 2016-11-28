@@ -12,18 +12,12 @@ public class EnemyFollow : MonoBehaviour
 	Rigidbody theRigidbody;
 	Renderer myRender;
 
-
-
-
-
-
 	void Start () 
 	{
 		myRender = GetComponent<Renderer>();
 		theRigidbody = GetComponent<Rigidbody> ();
 	
 	}
-	
 
 	void Update () 
 	{
@@ -38,8 +32,6 @@ public class EnemyFollow : MonoBehaviour
 			attackPlayer ();
 			print ("ATTACK!");
 		} 
-
-	
 	}
 
 	void lookAtPlayer()
@@ -47,6 +39,7 @@ public class EnemyFollow : MonoBehaviour
 		Quaternion rotation = Quaternion.LookRotation (heroTarget.position - transform.position);
 		transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * damping);
 		}
+
 	void attackPlayer()
 		{
 		theRigidbody.AddForce (transform.forward*enemySpeed);

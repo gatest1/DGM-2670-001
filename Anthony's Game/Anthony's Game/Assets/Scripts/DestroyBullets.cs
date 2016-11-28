@@ -14,7 +14,6 @@ public class DestroyBullets : MonoBehaviour
 	Rigidbody theRigidbody;
 	Renderer myRender;
 
-
 	void Start () 
 	{
 		myRender = GetComponent<Renderer>();
