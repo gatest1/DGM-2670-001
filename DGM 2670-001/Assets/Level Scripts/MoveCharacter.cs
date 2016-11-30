@@ -17,32 +17,28 @@ public class MoveCharacter : MonoBehaviour {
     //Sliding vars
     public int slideDuration = 100;
     public float slideTime = 0.01f;
+
+	public Animator animator;
+	int jumpHash = Animator.StringToHash("jump");
+	int landingHash = Animator.StringToHash("landing");
     //Coroutine for Sliding the Character
-    IEnumerator Slide ()
-    {
-        //Set a temp var to the value of slideDuration
-        int durationTemp = slideDuration;
-        //
-        float speedTemp = speed;
-        speed += speed;
-        //While loop runs "while" the slideDuration is greater than 0
-        while (slideDuration > 0)
-        {
-            //Decrement slideDuration
-            slideDuration--;
-            //yield "holds the coroutine"
-            //return "sends" to the coroutine to do an operation while yielding
-            //New creates an instance of an object
-            //WaitForSeconds is an object that waits for a duration of time
-            yield return new WaitForSeconds(slideTime);
-            
-        }
-        speed = speedTemp;
-        slideDuration = durationTemp;
-    }
+    
+
+	void Start ()
+	{
+		myCC = GetComponent<CharacterController> ();
+		animator = GetComponent<Animator> ();
+	}
 
     // Update is called once per frame
-    void Update () {
+    void Update () 
+	{
+		HandleLayers ();
+
+		if (myCC.velocity.y < 0) 
+		{
+			animator.SetBool (landingHash, true);
+		}
         //Waiting for input and comparing jumpcount
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < jumpCountMax-1)
         {
@@ -50,6 +46,7 @@ public class MoveCharacter : MonoBehaviour {
             jumpCount++;
             //adding the jumpSpeed var to the tempPos var
             tempPos.y = jumpSpeed;
+			animator.SetTrigger (jumpHash);
         }
         //Start Sliding
         if(Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.S))
@@ -61,6 +58,8 @@ public class MoveCharacter : MonoBehaviour {
         //test if the Charactercontroller is gounded
         if (myCC.isGrounded)
         {
+			animator.ResetTrigger (jumpHash);
+			animator.SetBool (landingHash, false);
             //reset the jump count if grounded
             jumpCount = 0;
         }
@@ -69,14 +68,52 @@ public class MoveCharacter : MonoBehaviour {
         //adding the speed var to the tempPos var x value with the right and left arrow keys
         tempPos.x = speed * Input.GetAxis("Horizontal");
         //Moves the Character Controller in at an even pace (deltaTime)
-        myCC.Move(tempPos * Time.deltaTime);  
+        myCC.Move(tempPos * Time.deltaTime); 
+		animator.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Horizontal")));
 		{
 			if(gameObject.tag == "PickUp")
 			{
 				gameObject.SetActive(false);
 			}
-
 		}
 	}
+
+	private void HandleLayers ()
+	{
+		if (myCC.isGrounded) {
+			animator.SetLayerWeight (1, 0);
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				animator.SetLayerWeight (1, 1);
+			}
+		} 
+		else 
+		{
+			animator.SetLayerWeight (1, 1);
+		}
+	}
+
+	IEnumerator Slide ()
+	{
+		//Set a temp var to the value of slideDuration
+		int durationTemp = slideDuration;
+		//
+		float speedTemp = speed;
+		speed += speed;
+		//While loop runs "while" the slideDuration is greater than 0
+		while (slideDuration > 0)
+		{
+			//Decrement slideDuration
+			slideDuration--;
+			//yield "holds the coroutine"
+			//return "sends" to the coroutine to do an operation while yielding
+			//New creates an instance of an object
+			//WaitForSeconds is an object that waits for a duration of time
+			yield return new WaitForSeconds(slideTime);
+
+		}
+		speed = speedTemp;
+		slideDuration = durationTemp;
+	}
+
 
 }
