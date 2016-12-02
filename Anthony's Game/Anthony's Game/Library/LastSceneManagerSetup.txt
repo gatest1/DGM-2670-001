@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Treasure Capture.unity
+- path: Assets/Scene/Delegate_Event.unity
   isLoaded: 1
   isActive: 1

@@ -3,13 +3,14 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour {
+public class Timer : MonoBehaviour 
+{
 
 	public Text timerText;
-	//public float myTimer = 107;
 	private bool gameOver = false;
-	public Text gameOverText;
+	//public Text gameOverText;
 	private bool timerIsActive = true;
+
 
 	void Start ()
 	{
@@ -17,12 +18,11 @@ public class Timer : MonoBehaviour {
 	}
 
 	void Update ()
-
 	{
 		timerText.text = "Time Left: " + Mathf.Round (StaticVars.gameTime -= Time.deltaTime);
-		gameOverText.text = "";
+		//gameOverText.text = "";
 
-	if (timerIsActive)
+		if (timerIsActive)
 	{
 			
 	//	myTimer -= Time.deltaTime;
@@ -35,14 +35,14 @@ public class Timer : MonoBehaviour {
 		}
 	}
 
-}
+	}
 
 	public void GameOver ()
 {
-	gameOverText.text = "Game Over!";
 	gameOver = true;
+	//gameOverText.text = "Game Over!";
 
-	SceneManager.LoadScene (0);
+	SceneManager.LoadScene (3);
 }
 
 }

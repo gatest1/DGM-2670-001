@@ -1,5 +1,5 @@
 ﻿public class StaticVars
 {
-	public Transform enemyPositon;
-	public static startPos;
+	//public Transform enemyPositon;
+	//public static startPos;
 }

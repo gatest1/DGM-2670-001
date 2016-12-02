@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 
 public class RestartGame : MonoBehaviour {
 
-	// Use this for initialization
-	void OnTriggerEnter () {
-        SceneManager.LoadScene(1);
-
+	void OnTriggerEnter () 
+	{
+       SceneManager.LoadScene(2);
 	}
 
 	void Start ()
 	{
 		StaticVars.nextSectionPosition = StaticVars.startPos;
 	}
-	
 }

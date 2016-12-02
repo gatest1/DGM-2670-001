@@ -8,6 +8,7 @@ public class RecycleObject : MonoBehaviour {
 	private Vector3 newLocation;
 	public List<Recycler> recyclableList;
 	private int i = 0;
+	public Transform thisPosition;
 
 	void Start()
 	{
@@ -23,9 +24,9 @@ public class RecycleObject : MonoBehaviour {
 	{
 
 		i = UnityEngine.Random.Range(0, recyclableList.Count - 1);
-		newLocation.x = StaticVars.thisPosition;
+		//newLocation.x = StaticVars.thisPosition;
 		recyclableList[i].cube.position = newLocation;
-		StaticVars.thisPosition;
+		//StaticVars.thisPosition;
 		if (recyclableList.Count > 0)
 		{ 
 			recyclableList.RemoveAt(i);
