@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System;
 
 public class DelegateIntro : MonoBehaviour {
@@ -24,4 +24,4 @@ public class DelegateIntro : MonoBehaviour {
 		if(MyEvent != null)
 			MyEvent ();
 	}
-}
+}*/

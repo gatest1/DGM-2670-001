@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Delegate_Event.unity
+- path: Assets/Scene/Volcano Escape.unity
   isLoaded: 1
   isActive: 1

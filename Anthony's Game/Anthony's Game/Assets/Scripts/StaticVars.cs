@@ -1,5 +1,7 @@
-﻿public class StaticVars
+﻿public class StaticVars 
 {
-	//public Transform enemyPositon;
-	//public static startPos;
+	public static float distance = 13f;
+	public static float nextSectionPosition = 26f;
+	public static float startPos = 26f;
 }
+

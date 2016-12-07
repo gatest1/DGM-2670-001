@@ -4,6 +4,6 @@
     public static float nextSectionPosition = 25f;
 	public static float startPos = 25f;
 	// This is for my GameTimer
-	public static float gameTime = 67f;
+	public static float gameTime = 65f;
 }
 
