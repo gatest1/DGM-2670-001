@@ -17,15 +17,13 @@ public class CloneRubble : MonoBehaviour {
 		while (canSpawnRubble) 
 		{
 			i = Random.Range (0, spawnPoints.Length - 1);
-			print (spawnPoints.Length);
 			Instantiate (rubble, spawnPoints [i].position, Quaternion.identity);
 			yield return new WaitForSeconds(spawnFrequency);
 
 		}
 
 	}
-
-	// Use this for initialization
+		
 	void Start () {
 		StartCoroutine (SpawnRubble ());
 	}
