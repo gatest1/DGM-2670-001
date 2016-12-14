@@ -1,27 +1,27 @@
-﻿/*using UnityEngine;
+﻿using UnityEngine;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
-public class DelegateIntro : MonoBehaviour {
-	
-	public static Action MyEvent;
-	public static Action<string> EventWithArgs;
-	public static Func<string> EventString;
+public class DelegateIntro : MonoBehaviour 
+{
 
-	public delegate string DelReturnArgs(string s);
-	public static DelReturnArgs EventReturnArgs;
+	public static Action<string> MyEvent;
+	public static Action<string> WithArgs;
+	public static Action<string>EventString;
 
-	void Start ()
+	void Start()
 	{
-
-		string data = EventReturnArgs ("CATS!");
-
-		print (data);
-
-		print (EventString ());
-
-		EventWithArgs ("Hello World!");
-
-		if(MyEvent != null)
-			MyEvent ();
+		print (MyEvent);
 	}
-}*/
+
+	void OnMouseDown()
+	{
+		print (WithArgs);
+	}
+
+	void OnTriggerEnter()
+	{
+		print (EventString);
+	}		
+}

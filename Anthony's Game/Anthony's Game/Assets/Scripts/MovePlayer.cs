@@ -24,21 +24,14 @@ public class MovePlayer : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Space) && jumpCount < jumpCountMax-1)
 			{
 			jumpCount++;
-
 			tempPos.y = jumpSpeed;
 			}
 		if (myCC.isGrounded)
 			{
 			jumpCount = 0;
 			}
-		tempPos.y -= gravity;
-		tempPos.x = speed * Input.GetAxis("Horizontal");
-		myCC.Move(tempPos * Time.deltaTime); 
-			{
-			if(gameObject.tag == "PickUp")
-				{
-				gameObject.SetActive(false);
-				}
-			}
+			tempPos.y -= gravity;
+			tempPos.x = speed * Input.GetAxis("Horizontal");
+			myCC.Move(tempPos * Time.deltaTime); 
 	}
 }

@@ -1,5 +1,8 @@
-﻿/*using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
+
 
 public class EventHAndlerIntro : MonoBehaviour 
 {
@@ -7,30 +10,25 @@ public class EventHAndlerIntro : MonoBehaviour
 	void Start () 
 	{
 		DelegateIntro.MyEvent += MyEventHandler;
-		DelegateIntro.EventWithArgs += EventWithArgsHandler;
+		DelegateIntro.WithArgs += WithArgsHandler;
 		DelegateIntro.EventString += EventStringHandler;
-		DelegateIntro.EventReturnArgs += EventReturnArgsHandler;
 	}
-
-	private void EventReturnArgsHandler(string s)
+		
+	private void MyEventHandler(string a)
 	{
-		return "The animals I hate most are " + s;
+		print (a);
 	}
-
-	private void EventStringHandler()
+	private void WithArgsHandler(string s)
 	{
-		print ("Do you hate cats?");
-		return "I hate cats!";
+		print("The animals I hate most are " + s);
 	}
 
-	private void EventWithArgsHandler(string s)
+	private void EventStringHandler(string s)
 	{
 		print(s);
 	}
 
-	private void MyEventHandler()
-	{
-		print ("Ran");
-	}
 
-}*/
+		
+
+}
