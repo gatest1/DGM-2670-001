@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Volcano Escape.unity
+- path: Assets/Scene/Treasure Capture.unity
   isLoaded: 1
   isActive: 1
